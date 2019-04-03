@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="feladat3" targetName="feladat3" />
+      <config projectName="feladat4" targetName="feladat4" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -11,7 +11,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff6cbc34-ae0f-4ed2-8ac3-a63c0bb1fcc2" name="Default Changelist" comment="" />
+    <list default="true" id="d61bd30a-95aa-4377-bfa9-97a82fa71d85" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../feladat3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../feladat3/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,8 +35,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+            <state relative-caret-position="187">
+              <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -54,7 +56,7 @@
   <component name="ProjectConfigurationFiles">
     <option name="files">
       <list>
-        <option value="$PROJECT_DIR$/.idea/feladat3.iml" />
+        <option value="$PROJECT_DIR$/.idea/feladat4.iml" />
         <option value="$PROJECT_DIR$/.idea/misc.xml" />
         <option value="$PROJECT_DIR$/.idea/vcs.xml" />
         <option value="$PROJECT_DIR$/.idea/modules.xml" />
@@ -73,12 +75,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -96,7 +97,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="feladat3" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="feladat3" TARGET_NAME="feladat3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="feladat3" RUN_TARGET_NAME="feladat3">
+    <configuration name="feladat4" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="feladat4" TARGET_NAME="feladat4" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="feladat4" RUN_TARGET_NAME="feladat4">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -107,17 +108,17 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ff6cbc34-ae0f-4ed2-8ac3-a63c0bb1fcc2" name="Default Changelist" comment="" />
-      <created>1554289887548</created>
+      <changelist id="d61bd30a-95aa-4377-bfa9-97a82fa71d85" name="Default Changelist" comment="" />
+      <created>1554291096348</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1554289887548</updated>
-      <workItem from="1554289889689" duration="1137000" />
+      <updated>1554291096348</updated>
+      <workItem from="1554291098411" duration="158000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1137000" />
+    <option name="totallyTimeSpent" value="158000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="20" width="1344" height="688" extended-state="0" />
@@ -134,7 +135,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32972974" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32972974" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -154,8 +155,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+        <state relative-caret-position="187">
+          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
