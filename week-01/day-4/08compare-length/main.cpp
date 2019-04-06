@@ -3,7 +3,7 @@
 
 int main(int argc, char* args[]) {
     int p1[] = {1, 2, 3};
-    int p2[] = {4, 5, 6, 7};
+    int p2[] = {4, 5};
 
     if (sizeof(p2) > sizeof(p1)) {
         std::cout<<"p2 is bigger, than p1"<<std::endl;
