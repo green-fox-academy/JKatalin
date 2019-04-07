@@ -12,7 +12,7 @@ int main(int argc, char *args[]) {
 
     std::cout << "The number of animals's legs on the farm is: " << c * 2 + p * 4 << std::endl;
 
-    
+
     return 0;
 }
 
