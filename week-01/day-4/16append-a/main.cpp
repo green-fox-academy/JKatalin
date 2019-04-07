@@ -7,8 +7,9 @@ int main(int argc, char *args[]) {
 
     for (int i = 0; i < sizeof(animals) / sizeof(animals[0]); i++) {
         animals[i] = animals[i] + "a";
-        std::cout << animals[i] << " " << std::endl;
+        std::cout << animals[i] << " ";
     }
+    std::cout<< std::endl;
 
     return 0;
 }
