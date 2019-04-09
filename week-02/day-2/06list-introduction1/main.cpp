@@ -26,7 +26,7 @@ int main() {
     int i = 0;
     for (; itName != nameVector.end(); itName++) {
         // std::cout << *itName << std::endl;
-        
+
         std::cout << i + 1 << ". " << *itName << std::endl;
         i++;
     }
