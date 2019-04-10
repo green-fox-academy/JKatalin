@@ -41,7 +41,7 @@ int main() {
     charMap.clear();
 
 
-    
+
     std::map<int, char>::iterator charIt2 = charMap.begin();
     for (; charIt2 != charMap.end(); charIt2++) {
         std::cout << charIt2->first << charIt2->second << std::endl;
