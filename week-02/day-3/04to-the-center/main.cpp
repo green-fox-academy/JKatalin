@@ -23,20 +23,8 @@ SDL_Renderer* gRenderer = nullptr;
 
 void draw()
 {
-    // Draw a box that has different colored lines on each edge.
-    // The center of the box should align with the center of the screen.
-
-    SDL_SetRenderDrawColor(gRenderer, 0x00 , 0xFF , 0x00, 0xFF);
-    SDL_RenderDrawLine(gRenderer, 640/3, 480/3, 640*2/3, 480/3);
-
-    SDL_SetRenderDrawColor(gRenderer, 0xFF , 0xFF , 0x00, 0xFF);
-    SDL_RenderDrawLine(gRenderer, 640/3, 480/3, 640/3, 480*2/3);
-
-    SDL_SetRenderDrawColor(gRenderer, 0x00 , 0xFF , 0xFF, 0xFF);
-    SDL_RenderDrawLine(gRenderer, 640/3, 480*2/3, 640*2/3, 480*2/3);
-
-    SDL_SetRenderDrawColor(gRenderer, 0x00 , 0x00 , 0xFF, 0xFF);
-    SDL_RenderDrawLine(gRenderer, 640*2/3, 480/3, 640*2/3, 480*2/3);
+    // draw a red horizontal line to the canvas' middle.
+    // draw a green vertical line to the canvas' middle.
 }
 
 bool init()
@@ -49,7 +37,7 @@ bool init()
     }
 
     //Create window
-    gWindow = SDL_CreateWindow( "Colored box", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
+    gWindow = SDL_CreateWindow( "Line in the middle", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
     if( gWindow == nullptr )
     {
         std::cout << "Window could not be created! SDL Error: " << SDL_GetError() << std::endl;
