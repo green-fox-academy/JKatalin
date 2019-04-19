@@ -66,7 +66,7 @@ int main() {
 
 
     std::cout << std::endl;
-    
+
     for (int i = 0; i < listA.size(); ++i) {
         std::cout << listA.at(i) << std::endl;
     }
