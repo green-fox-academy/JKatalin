@@ -17,7 +17,7 @@ int main() {
         std::cout << "We don't have milk on the list." << std::endl;
     }
 
-    
+
     bool isBananaInList = false;
     for (unsigned int i = 0; i < vectorShopping.size(); i++) {
         if (vectorShopping.at(i) == "bananas") {
