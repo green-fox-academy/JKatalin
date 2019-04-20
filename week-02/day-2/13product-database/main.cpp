@@ -45,7 +45,7 @@ int main() {
             cheapestProd = itProduct->first;
         }
     }
-    
+
     std::cout << "The most expensive product is the " << mostExpProduct << " and the price is: " << maxPrice << std::endl;
 
     std::cout << "The average price is: " << amount / mapProduct.size() << std::endl;
