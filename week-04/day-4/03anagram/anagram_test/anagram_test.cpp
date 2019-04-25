@@ -81,3 +81,23 @@ TEST(AnagramCheck, IsAnagramMoreSameLetterTest)
 
     ASSERT_EQ(result, true);
 }
+
+TEST(AnagramCheck, NumberInStringNotAnagramTest)
+{
+    std::string string1 = "3cat";
+    std::string string2 = "ca2t";
+
+    bool result = anagramItIs(string1, string2);
+
+    ASSERT_EQ(result, false);
+}
+
+TEST(AnagramCheck, NumberInStringIsAnagramTest)
+{
+    std::string string1 = "33cat";
+    std::string string2 = "c3a3t";
+
+    bool result = anagramItIs(string1, string2);
+
+    ASSERT_EQ(result, true);
+}
