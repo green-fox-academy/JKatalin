@@ -5,9 +5,16 @@
 #ifndef INC_03FLYABLE_VEHICLE_H
 #define INC_03FLYABLE_VEHICLE_H
 
+#include <iostream>
 
-class vehicle {
+class Vehicle {
+public:
+    Vehicle(int numberOfWheel, int gasCapacity, std::string name);
 
+private:
+    int _numberOfWheel;
+    int _gasCapacity;
+    std::string _name;
 };
 
 

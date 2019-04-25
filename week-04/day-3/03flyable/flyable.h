@@ -6,7 +6,11 @@
 #define INC_03FLYABLE_FLYABLE_H
 
 
-class flyable {
+class Flyable {
+public:
+    virtual void land() = 0;
+    virtual void fly() = 0;
+    virtual void takeOff() = 0;
 
 };
 
