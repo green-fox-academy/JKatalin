@@ -17,7 +17,7 @@ void Tree::waterAbsorb(float amount)
 bool Tree::waterNeed()
 {
     std::cout << _color << " waterlevel: " << _waterAmount << std::endl;
-    if (_waterAmount < 10){
+    if (_waterAmount < 10) {
         return true;
     }
     return false;

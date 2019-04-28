@@ -12,7 +12,6 @@ public:
     Tree(std::string color, float waterAmount);
 
     void waterAbsorb(float amount) override;
-
     bool waterNeed() override;
 };
 

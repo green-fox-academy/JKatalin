@@ -10,12 +10,12 @@ Flower::Flower(std::string color, float waterAmount) : Plant(color, waterAmount)
 
 void Flower::waterAbsorb(float amount)
 {
-_waterAmount = _waterAmount + amount * 0.75;
+    _waterAmount = _waterAmount + amount * 0.75;
 }
 
 bool Flower::waterNeed()
 {
-    if (_waterAmount < 5){
+    if (_waterAmount < 5) {
         return true;
     }
     return false;
