@@ -2,13 +2,32 @@
 // Created by Kata on 2019. 04. 22..
 //
 
-#ifndef INC_05SHARPIE_SET_SHARPIE_H
-#define INC_05SHARPIE_SET_SHARPIE_H
+#ifndef INC_04SHARPIE_SHARPIE_H
+#define INC_04SHARPIE_SHARPIE_H
+
+#include <iostream>
 
 
-class sharpie {
+class Sharpie {
+public:
+    Sharpie(std::string color, float width, float inkAmount);
+
+    void setColor(const std::string &color);
+    void setWidth(float width);
+    void setInkAmount(float inkAmount);
+
+    const std::string &getColor() const;
+    float getWidth() const;
+    float getInkAmount() const;
+
+    void use(int inkDec);
+
+private:
+    std::string _color;
+    float _width;
+    float _inkAmount;
 
 };
 
 
-#endif //INC_05SHARPIE_SET_SHARPIE_H
+#endif //INC_04SHARPIE_SHARPIE_H
