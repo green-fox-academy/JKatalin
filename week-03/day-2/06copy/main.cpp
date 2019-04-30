@@ -33,28 +33,36 @@ int main()
 
 bool copy(std::string myfile)
 {
-    std::ifstream myfileRead;
-    myfileRead.open(myfile);
-    if (!myfileRead.is_open()) {
-        std::cout << "Unable to open" << std::endl;
-        return false;
+    try {
+        std::ifstream myfileRead;
+        myfileRead.exceptions(std::ifstream::badbit);
+        myfileRead.open(myfile);
+        if (!myfileRead.is_open()) {
+            std::cout << "Unable to open" << std::endl;
+            return false;
+        }
+
+        std::ofstream fileToCopy;
+        fileToCopy.exceptions(std::ifstream::failbit | std::ifstream::badbit);
+        fileToCopy.open("../copy.txt");
+        if (!fileToCopy.is_open()) {
+            std::cout << "Unable to open" << std::endl;
+            return false;
+        }
+
+        std::string line;
+        while (std::getline(myfileRead, line)) {
+            fileToCopy << line << std::endl;
+        }
+
+        myfileRead.close();
+        fileToCopy.close();
+
+        return true;
+
+    } catch (std::ios_base::failure& e ) { //ios_base ősosztálya a failure-nek ebből az fstream, amiből az ifstr és ofstr -mindent tartalmaz
+        std::cerr << e.what() << std::endl;
     }
 
-    std::ofstream fileToCopy;
-    fileToCopy.open("../copy.txt");
-    if (!fileToCopy.is_open()) {
-        std::cout << "Unable to open" << std::endl;
-        return false;
-    }
-
-    std::string line;
-    while (std::getline(myfileRead, line)) {
-        fileToCopy << line << std::endl;
-    }
-
-    myfileRead.close();
-    fileToCopy.close();
-
-    return true;
-
+    return false;
 }
