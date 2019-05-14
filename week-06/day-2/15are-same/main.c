@@ -20,8 +20,8 @@ int main()
         printf("The two words are different.");
     }
 
-    printf("%s\n", string1);
-    printf("%s", string2);
+    //printf("%s\n", string1);
+    //printf("%s", string2);
 
     return 0;
 }
@@ -33,8 +33,8 @@ int same_string(char string1[], char string2[])
             if (string1[i] != string2[i]) {
                 return 0;
             }
-            return 1;
         }
+        return 1;
     }
     return 0;
 }
