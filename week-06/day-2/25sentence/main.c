@@ -5,12 +5,25 @@
 // and splits a string to words by space
 // solve the problem with the proper string.h function
 
+void split_string(char string[]);
+
 int main()
 {
     printf("Type in a sentence:\n\n");
     char string[256];
+    gets(string);
 
-    return(0);
+    split_string(string);
+
+    return (0);
 }
 
-void
+void split_string(char string[])
+{
+    char *word = strtok(string, " ");
+
+    while (word != NULL) {
+        puts(word);
+        word = strtok(NULL, " ");
+    }
+};
