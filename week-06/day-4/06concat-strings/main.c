@@ -10,7 +10,7 @@ char *concat(char *s1, char *s2);
 
 int main()
 {
-    char *s = concat("tropicalfbfgsdgsdgsdg", "words");
+    char *s = concat("tropical", "fruit");
     printf("%s", s);
 
     free(s);
@@ -21,7 +21,7 @@ int main()
 
 char *concat(char *s1, char *s2)
 {
-    char *result = (char *)malloc(strlen(s1) + strlen(s2) + 1);
+    char *result = (char *)malloc((strlen(s1) + strlen(s2) + 1) * sizeof(char));
 
     strcpy(result, s1);
     strcat(result, s2);
