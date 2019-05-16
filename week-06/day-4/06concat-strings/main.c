@@ -6,11 +6,11 @@
 // Test it for long and empty strings as well.
 // Try to use the least amount of memory that's possible.
 
-char *concat(const char *s1, const char *s2);
+char *concat(char *s1, char *s2);
 
 int main()
 {
-    char *s = concat("tropical", "words");
+    char *s = concat("tropicalfbfgsdgsdgsdg", "words");
     printf("%s", s);
 
     free(s);
@@ -19,9 +19,9 @@ int main()
     return 0;
 }
 
-char *concat(const char *s1, const char *s2)
+char *concat(char *s1, char *s2)
 {
-    char *result = malloc(strlen(s1) + strlen(s2) + 1);
+    char *result = (char *)malloc(strlen(s1) + strlen(s2) + 1);
 
     strcpy(result, s1);
     strcat(result, s2);
