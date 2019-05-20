@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-int digits_sum_is_equal(char number1[], char number2[], int size1, int size2);
+int digits_sum_is_equal(char number1[], char number2[]);
 
 int main()
 {
@@ -10,31 +11,27 @@ int main()
 
     printf("Please enter the first number:");
     scanf("%s", number1);
-    int size1 = sizeof(number1) / sizeof(number1[0]);
 
     printf("Please enter the second number:");
     scanf("%s", number2);
-    int size2 = sizeof(number2) / sizeof(number2[0]);
 
-    printf("%d", digits_sum_is_equal(number1, number2, size1, size2));
-
+    printf("%d", digits_sum_is_equal(number1, number2));
 
     return 0;
 }
 
-int digits_sum_is_equal(char number1[], char number2[], int size1, int size2)
+int digits_sum_is_equal(char number1[], char number2[])
 {
     int sum1 = 0;
-    for (int i = 0; i < size1; i++) {
-        int x = number1[i] - '0';
-        sum1 = sum1 + x;
-        //printf("%d", number1[i]);
+    for (int i = 0; i < strlen(number1); i++) {
+        sum1 = sum1 + number1[i] - '0';
+        //printf("%d\n", number1[i] - '0');   just for control the code
     }
 
     int sum2 = 0;
-    for (int i = 0; i < size2; i++) {
+    for (int i = 0; i < strlen(number2); i++) {
         sum2 = sum2 + number2[i] - '0';
-        //printf("%d", number2[i]);
+        //printf("%d\n", number2[i] - '0');   just for control the code
     }
 
     if (sum1 == sum2) {
