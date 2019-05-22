@@ -32,13 +32,13 @@ int main(void)
     	GPIOF->BSRR = red_led_on << 1;
     	GPIOF->BSRR = red_led_on << 2;
     	GPIOF->BSRR = red_led_on << 3;
-    	HAL_Delay(125);
+    	HAL_Delay(500);
 
     	GPIOF->BSRR = red_led_off;
     	GPIOF->BSRR = red_led_off << 1;
     	GPIOF->BSRR = red_led_off << 2;
     	GPIOF->BSRR = red_led_off << 3;
-    	HAL_Delay(750);
+    	HAL_Delay(500);
     }
 }
 
