@@ -11,7 +11,7 @@ int main()
     char string[55] = "This is a string for testing";
     //char *p;
     i_positions(string);
-    
+
     return 0;
 }
 
