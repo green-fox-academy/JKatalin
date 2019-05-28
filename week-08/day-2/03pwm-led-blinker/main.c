@@ -23,8 +23,7 @@ TIM_OC_InitTypeDef pwm_config;
 GPIO_InitTypeDef PA15_LED_config;
 
 void init_LED() {
-	__HAL_RCC_GPIOA_CLK_ENABLE()
-	;
+	__HAL_RCC_GPIOA_CLK_ENABLE();
 
 	PA15_LED_config.Pin = GPIO_PIN_15;
 	PA15_LED_config.Mode = GPIO_MODE_AF_PP; /* configure as output, in PUSH-PULL mode */
@@ -36,8 +35,7 @@ void init_LED() {
 }
 
 void init_timer() {
-	__HAL_RCC_TIM2_CLK_ENABLE()
-	;
+	__HAL_RCC_TIM2_CLK_ENABLE();
 
 	timer_handle.Instance = TIM2;
 	timer_handle.Init.Prescaler = 108 - 1; // 108000000/108=1000000 -> speed of 1 count-up: 1/1000000 s = 0.001 ms
@@ -75,11 +73,11 @@ int main(void) {
 
 	while (1) {
 		// We can set the compare value (the pulse width of the signal) like this:
-		for (int i = 0; i < 100; i++) {
+		for (int i = 0; i < 50; i++) {
 			__HAL_TIM_SET_COMPARE(&timer_handle, TIM_CHANNEL_1, i);
 			HAL_Delay(70);
 		}
-		for (int i = 100; i > 0; i--) {
+		for (int i = 50; i > 0; i--) {
 			__HAL_TIM_SET_COMPARE(&timer_handle, TIM_CHANNEL_1, i);
 			HAL_Delay(70);
 		}
@@ -97,8 +95,8 @@ void SystemClock_Config(void) {
 	RCC_ClkInitTypeDef RCC_ClkInitStruct = { 0 };
 
 	/**Configure the main internal regulator output voltage */
-	__HAL_RCC_PWR_CLK_ENABLE()
-	;
+	__HAL_RCC_PWR_CLK_ENABLE();
+
 	__HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
 
 	/**Initializes the CPU, AHB and APB busses clocks */
