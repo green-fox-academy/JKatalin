@@ -1,7 +1,7 @@
 #include "stm32f7xx.h"
 #include "stm32746g_discovery.h"
 
-//#define UART_PUTCHAR int __io_putchar(int ch)
+#define UART_PUTCHAR int __io_putchar(int ch)
 
 typedef enum {
 	OPEN, SECURING, SECURED, OPENING
@@ -32,6 +32,8 @@ int main(void)
 
 	HAL_TIM_Base_Start_IT(&timer_handle);
 
+	printf("%s\n", "Open");
+
 	while (1) {
 	}
 }
@@ -61,12 +63,12 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 	if (status == OPEN) {
 		status = SECURING;
 		counter = 0;
-		printf("%s", "Securing");
+		printf("%s\n", "Securing");
 	}
 	if (status == SECURED) {
 		status = OPENING;
 		counter = 0;
-		printf("%s", "Opening");
+		printf("%s\n", "Opening");
 	}
 }
 
@@ -110,7 +112,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 			if (counter == 10) {
 				status = SECURED;
 				counter = 0;
-				printf("%s", "Secured");
+				printf("%s\n", "Secured");
 			}
 		}
 
@@ -124,7 +126,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 			if (counter == 12) {
 				status = OPEN;
 				counter = 0;
-				printf("%s", "Open");
+				printf("%s\n", "Open");
 			}
 		}
 	}
@@ -147,10 +149,10 @@ void init_uart()
 	BSP_COM_Init(COM1, &uart_handle);
 }
 
-/*UART_PUTCHAR {
+UART_PUTCHAR {
  HAL_UART_Transmit(&uart_handle, (uint8_t*) &ch, 1, 0xFFFF);
  return ch;
- }*/
+ }
 
 void Error_Handler(void)
 {
@@ -199,7 +201,7 @@ void SystemClock_Config(void)
 	}
 }
 
-int _write(int file, char *ptr, int len)
+/*int _write(int file, char *ptr, int len)
 
 {
 	int DataIdx;
@@ -210,5 +212,5 @@ int _write(int file, char *ptr, int len)
 
 	}
 	return len;
-}
+}*/
 
